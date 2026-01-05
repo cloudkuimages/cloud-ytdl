@@ -1,9 +1,9 @@
-# ytdl-cloud
+# cloud-ytdl
 
 A reliable YouTube downloader and scraper using InnerTube clients. Includes video, stream, and Community Post extraction (text, images, polls). Production-ready for Node.js 18+.
 
 **Created by:** [AlfiDev](https://github.com/cloudkuimages)  
-**Repository:** [github.com/cloudkuimages/ytdl-cloud](https://github.com/cloudkuimages/ytdl-cloud)
+**Repository:** [github.com/cloudkuimages/cloud-ytdl](https://github.com/cloudkuimages/cloud-ytdl)
 
 ## Features
 
@@ -20,7 +20,7 @@ A reliable YouTube downloader and scraper using InnerTube clients. Includes vide
 ## Installation
 
 ```bash
-npm install ytdl-cloud
+npm install cloud-ytdl
 ```
 
 ## Quick Start
@@ -28,7 +28,7 @@ npm install ytdl-cloud
 ### Basic Video Download
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 // Download video with best quality
@@ -39,7 +39,7 @@ ytdl('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
 ### Download with Quality Selection
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 // Highest quality
@@ -306,7 +306,7 @@ Get subtitles/captions for a video in XML or SRT format.
 
 **Example:**
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 
 // Get subtitles in XML format (default)
 ytdl.getSubtitles('dQw4w9WgXcQ', { lang: 'en' })
@@ -361,7 +361,7 @@ Get playlist information including all videos in the playlist.
 
 **Example:**
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 
 ytdl.getPlaylistInfo('https://www.youtube.com/playlist?list=PLxxxxx')
   .then(playlist => {
@@ -415,7 +415,7 @@ Get YouTube Community Post information (text, images, polls).
 
 **Example (CommonJS):**
 ```javascript
-const { getPostInfo } = require('ytdl-cloud');
+const { getPostInfo } = require('cloud-ytdl');
 
 const postUrl = 'https://www.youtube.com/post/Ugkx...';
 getPostInfo(postUrl)
@@ -672,7 +672,7 @@ For videos with restricted access (age-restricted, region-locked, or member-only
 5. Use the cookie string in your code:
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 const cookieString = 'VISITOR_INFO1_LIVE=xxx; YSC=yyy; ...';
@@ -689,7 +689,7 @@ ytdl('VIDEO_URL', {
 ### Method 2: Using Agent with Cookies
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 const cookieString = 'VISITOR_INFO1_LIVE=xxx; YSC=yyy; ...';
@@ -702,7 +702,7 @@ ytdl('VIDEO_URL', { agent })
 ### Method 3: Save Cookie to File
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 // Save cookie string to file (don't commit to git!)
@@ -809,7 +809,7 @@ video.pipe(fs.createWriteStream('video.mp4'));
 ### Download with Progress Tracking
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 ytdl.getInfo('VIDEO_URL').then(info => {
@@ -836,7 +836,7 @@ ytdl.getInfo('VIDEO_URL').then(info => {
 ### Download Audio with Best Format
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 const url = 'VIDEO_URL';
@@ -852,7 +852,7 @@ ytdl(url, { format: audioFormat })
 ### Custom Filter Function
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 ytdl('VIDEO_URL', {
@@ -868,7 +868,7 @@ ytdl('VIDEO_URL', {
 ### Download Multiple Formats
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 const url = 'VIDEO_URL';
@@ -888,7 +888,7 @@ ytdl.downloadFromInfo(info, { format: bestAudio })
 ### Get Subtitles
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 const fs = require('fs');
 
 async function downloadSubtitles() {
@@ -916,7 +916,7 @@ downloadSubtitles();
 ### Get Playlist Information
 
 ```javascript
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 
 async function getPlaylist() {
   try {
@@ -946,7 +946,7 @@ getPlaylist();
 ### Get Community Post Info
 
 ```javascript
-const { getPostInfo } = require('ytdl-cloud');
+const { getPostInfo } = require('cloud-ytdl');
 
 async function getPost() {
   try {
@@ -1039,7 +1039,7 @@ This library is designed as a drop-in replacement for `ytdl-core` with the follo
 const ytdl = require('ytdl-core');
 
 // After
-const ytdl = require('ytdl-cloud');
+const ytdl = require('cloud-ytdl');
 
 // All existing code continues to work!
 ```
@@ -1056,7 +1056,7 @@ MIT
 ## Credits
 
 **Created by:** [AlfiDev](https://github.com/cloudkuimages)  
-**Repository:** [github.com/cloudkuimages/ytdl-cloud](https://github.com/cloudkuimages/ytdl-cloud)
+**Repository:** [github.com/cloudkuimages/cloud-ytdl](https://github.com/cloudkuimages/cloud-ytdl)
 
 ---
 
