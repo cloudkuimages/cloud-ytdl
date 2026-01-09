@@ -768,6 +768,18 @@ Throws when cipher extraction or signature decryption fails.
 
 ---
 
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+- Reporting bugs
+- Suggesting features
+- Submitting pull requests
+- Code style and conventions
+
+For bug reports, please use our [issue templates](https://github.com/cloudkuimages/cloud-ytdl/issues/new/choose) to provide all necessary information.
+
+---
+
 ## 📜 License
 
 MIT
